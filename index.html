@@ -3,386 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sussex Safe Test - Professional Safety Testing Services</title>
+    <title>Sussex Safe Test</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            font-weight: 300;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .main-content {
-            background: white;
-            margin: 2rem auto;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 2rem;
+        .header {
             text-align: center;
+            margin-bottom: 30px;
         }
-
-        .contact-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        .logo {
+            max-width: 200px;
+            height: auto;
         }
-
-        .phone-number {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin: 1.5rem 0;
-            padding: 1rem 2rem;
-            background: rgba(255,255,255,0.2);
-            border-radius: 50px;
-            display: inline-block;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: all 0.3s ease;
+        .contact-info {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
         }
-
-        .phone-number:hover {
-            background: rgba(255,255,255,0.3);
-            transform: translateY(-2px);
-        }
-
-        .phone-icon {
-            margin-right: 0.5rem;
-            font-size: 2.5rem;
-        }
-
-        .cta-text {
-            font-size: 1.3rem;
-            margin-top: 1rem;
-            opacity: 0.95;
-        }
-
-        .services-section {
-            padding: 3rem 2rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .service-card {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
+        .phone {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c5aa0;
             text-align: center;
-            border-left: 5px solid #2a5298;
-            transition: all 0.3s ease;
+            margin: 15px 0;
         }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #2a5298;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1e3c72;
-        }
-
-        .pdf-section {
-            padding: 3rem 2rem;
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .pdf-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #1e3c72;
-        }
-
-        .pdf-buttons {
-            margin: 2rem 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 1rem 2rem;
-            margin: 0.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-secondary {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .pdf-viewer {
+        .pdf-embed {
             width: 100%;
             height: 600px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-top: 2rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
-
-        .about-section {
-            padding: 3rem 2rem;
-            background: white;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #1e3c72;
-        }
-
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .about-features {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .feature-list {
-            list-style: none;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0;
-            font-size: 1.1rem;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .feature-list li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .footer {
-            background: #1e3c72;
+        .download-btn {
+            display: inline-block;
+            background-color: #2c5aa0;
             color: white;
-            text-align: center;
-            padding: 2rem 0;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+            font-weight: bold;
         }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .footer-section p {
-            opacity: 0.9;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-            
-            .phone-number {
-                font-size: 2rem;
-                padding: 0.8rem 1.5rem;
-            }
-            
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+        .download-btn:hover {
+            background-color: #1e3d6f;
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <h1>Sussex Safe Test</h1>
-            <p>Professional Safety Testing & Certification Services</p>
-        </div>
-    </header>
-
     <div class="container">
-        <div class="main-content">
-            <section class="contact-section">
-                <h2>Get Your Safety Testing Done Right</h2>
-                <div class="phone-number">
-                    <span class="phone-icon">📞</span>
-                    033 333 999 27
-                </div>
-                <p class="cta-text">Call now for professional safety testing services</p>
-            </section>
+        <div class="header">
+            <h1>Sussex Safe Test</h1>
+            <p>Professional Safety Testing Services</p>
+        </div>
 
-            <section class="services-section">
-                <div class="container">
-                    <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: #1e3c72;">Our Services</h2>
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <div class="service-icon">⚡</div>
-                            <h3>Electrical Testing</h3>
-                            <p>Comprehensive PAT testing and electrical safety inspections for all your equipment and installations.</p>
-                        </div>
-                        <div class="service-card">
-                            <div class="service-icon">🛡️</div>
-                            <h3>Safety Certification</h3>
-                            <p>Official safety certificates and compliance documentation for regulatory requirements.</p>
-                        </div>
-                        <div class="service-card">
-                            <div class="service-icon">🔧</div>
-                            <h3>Equipment Testing</h3>
-                            <p>Professional testing of industrial and commercial equipment to ensure safety standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="phone">📞 033 333 999 27</div>
+            <p style="text-align: center;">Call us for all your safety testing needs</p>
+        </div>
 
-            <section class="pdf-section">
-                <h2>Documentation & Certificates</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 2rem;">Access your safety testing documentation</p>
-                
-                <div class="pdf-buttons">
-                    <a href="SussexSafeTestcom.pdf" class="btn btn-primary" download>
-                        📄 Download Certificate
-                    </a>
-                    <a href="SussexSafeTestcom.pdf" class="btn btn-secondary" target="_blank">
-                        👁️ View Online
-                    </a>
-                </div>
+        <div style="text-align: center; margin: 30px 0;">
+            <a href="SussexSafeTestcom.pdf" class="download-btn" download>📄 Download PDF</a>
+            <a href="SussexSafeTestcom.pdf" class="download-btn" target="_blank">👁️ View PDF</a>
+        </div>
 
-                <iframe src="SussexSafeTestcom.pdf" class="pdf-viewer" type="application/pdf">
-                    <p>Your browser doesn't support PDF viewing. <a href="SussexSafeTestcom.pdf" class="btn btn-primary">Download the PDF</a> instead.</p>
-                </iframe>
-            </section>
+        <div>
+            <h3>Sussex Safe Test Document</h3>
+            <iframe src="SussexSafeTestcom.pdf" class="pdf-embed" type="application/pdf">
+                <p>Your browser doesn't support PDF viewing. <a href="SussexSafeTestcom.pdf">Download the PDF</a> instead.</p>
+            </iframe>
+        </div>
 
-            <section class="about-section">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Why Choose Sussex Safe Test?</h2>
-                        <p>We are Sussex's leading provider of professional safety testing services, ensuring your equipment and installations meet all required safety standards and regulations.</p>
-                        <p>Our certified technicians use state-of-the-art testing equipment to provide accurate, reliable results you can trust.</p>
-                        <p><strong>Contact us today:</strong> 033 333 999 27</p>
-                    </div>
-                    <div class="about-features">
-                        <h3 style="margin-bottom: 1.5rem; color: #1e3c72;">What We Offer:</h3>
-                        <ul class="feature-list">
-                            <li>Certified safety testing professionals</li>
-                            <li>Fast turnaround times</li>
-                            <li>Competitive pricing</li>
-                            <li>Comprehensive documentation</li>
-                            <li>Regulatory compliance assurance</li>
-                            <li>Emergency testing services</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+        <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+            <h3>About Sussex Safe Test</h3>
+            <p>We provide comprehensive safety testing services to ensure your equipment and installations meet all required safety standards.</p>
+            <p><strong>Phone:</strong> 033 333 999 27</p>
+            <p>Contact us today to schedule your safety testing appointment.</p>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sussex Safe Test</h3>
-                    <p>Professional Safety Testing Services</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Phone: 033 333 999 27</p>
-                    <p>Professional safety testing across Sussex</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <p>PAT Testing • Safety Certification • Equipment Testing</p>
-                </div>
-            </div>
-            <p style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; margin-top: 2rem;">
-                © 2024 Sussex Safe Test. Professional Safety Testing Services.
-            </p>
-        </div>
-    </footer>
 </body>
 </html>
