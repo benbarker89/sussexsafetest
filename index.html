@@ -42,7 +42,6 @@
         .transition-all-fast {
             transition: all 0.2s ease-in-out;
         }
-        /* JS will toggle the 'hidden' class now, so hover logic is removed */
     </style>
     <script>
         tailwind.config = {
@@ -84,7 +83,7 @@
                         Contact Us
                         <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
-                    <div id="contact-dropdown-menu" class="absolute hidden bg-dark-bg-card rounded-md shadow-lg mt-2 py-1 w-48 z-50">
+                    <div id="contact-dropdown-menu" class="absolute hidden right-0 bg-dark-bg-card rounded-md shadow-lg mt-2 py-1 w-48 z-50">
                         <a href="mailto:office@sussexsafetest.co.uk" class="block px-4 py-2 text-sm text-gray-300 hover:bg-dark-bg hover:text-primary">Email Us</a>
                         <a href="tel:03333399927" class="block px-4 py-2 text-sm text-gray-300 hover:bg-dark-bg hover:text-primary">Call Us</a>
                     </div>
@@ -111,7 +110,7 @@
         <section class="hero-section text-white min-h-screen flex items-center justify-center">
             <div class="container mx-auto px-6 py-20 md:py-28 text-center flex flex-col items-center">
                  <div class="mb-6">
-                    <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-32 md:h-40 w-auto mx-auto" style="background-color: transparent;">
+                    <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-40 md:h-56 lg:h-64 w-auto mx-auto" style="background-color: transparent;">
                  </div>
                 <h1 class="font-logo text-3xl md:text-5xl font-bold uppercase tracking-wider text-secondary text-glow-red">Portable Appliance Testing</h1>
                 <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
@@ -274,7 +273,7 @@
                          <div class="bg-dark-bg-card p-6 rounded-lg shadow-lg border border-gray-700 space-y-4">
                             <p class="text-gray-300">Based in Hastings, we provide expert PAT testing services throughout Sussex and Kent.</p>
                             <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg><a href="mailto:office@sussexsafetest.co.uk" class="text-gray-200 hover:text-primary">office@sussexsafetest.co.uk</a></div>
-                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" fill-rule="evenodd"></path></svg><a href="tel:03333399927" class="text-gray-200 hover:text-primary">033 333 999 27</a></div>
+                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" fill-rule="evenodd"></path></svg><a href="tel:03333399927" class="font-bold text-xl text-primary text-glow-green hover:text-primary-dark">033 333 999 27</a></div>
                              <div class="flex items-start space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg><p class="text-gray-200">48 Greenacres, Westfield, Hastings, East Sussex, TN35 4QT</p></div>
                         </div>
                     </div>
@@ -309,61 +308,65 @@
     </a>
 
     <script>
-        // Mobile Menu Logic
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Desktop Dropdown Logic
-        const contactDropdownButton = document.getElementById('contact-dropdown-button');
-        const contactDropdownMenu = document.getElementById('contact-dropdown-menu');
-
-        contactDropdownButton.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevents the window click listener from firing
-            contactDropdownMenu.classList.toggle('hidden');
-        });
-
-        // Close dropdown when clicking outside
-        window.addEventListener('click', (event) => {
-            if (!contactDropdownMenu.classList.contains('hidden')) {
-                contactDropdownMenu.classList.add('hidden');
-            }
-        });
-
-        // Close mobile menu when a link is clicked
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
+            
+            // Desktop Dropdown Logic
+            const contactDropdownButton = document.getElementById('contact-dropdown-button');
+            const contactDropdownMenu = document.getElementById('contact-dropdown-menu');
 
-        const contactForm = document.getElementById('contact-form');
-        const formMessage = document.getElementById('form-message');
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            contactDropdownButton.addEventListener('click', (event) => {
+                event.stopPropagation();
+                contactDropdownMenu.classList.toggle('hidden');
+            });
 
-            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                formMessage.textContent = 'Please fill out all fields.';
-                formMessage.style.color = '#FF0000';
-                return;
-            }
-            if (!/^\S+@\S+\.\S+$/.test(email)) {
-                formMessage.textContent = 'Please enter a valid email address.';
-                formMessage.style.color = '#FF0000';
-                return;
-            }
-            formMessage.textContent = 'Thank you for your message!';
-            formMessage.style.color = '#00FF00';
-            contactForm.reset();
-            setTimeout(() => { formMessage.textContent = ''; }, 5000);
+            // Close dropdown when clicking outside
+            window.addEventListener('click', (event) => {
+                if (!contactDropdownButton.contains(event.target) && !contactDropdownMenu.contains(event.target)) {
+                    if (!contactDropdownMenu.classList.contains('hidden')) {
+                        contactDropdownMenu.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Close mobile menu when a link is clicked
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                    formMessage.textContent = 'Please fill out all fields.';
+                    formMessage.style.color = '#FF0000';
+                    return;
+                }
+                if (!/^\S+@\S+\.\S+$/.test(email)) {
+                    formMessage.textContent = 'Please enter a valid email address.';
+                    formMessage.style.color = '#FF0000';
+                    return;
+                }
+                formMessage.textContent = 'Thank you for your message!';
+                formMessage.style.color = '#00FF00';
+                contactForm.reset();
+                setTimeout(() => { formMessage.textContent = ''; }, 5000);
+            });
+            
+            document.getElementById('current-year').textContent = new Date().getFullYear();
         });
-        
-        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
