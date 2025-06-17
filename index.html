@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sussex Safe Test | Portable Appliance Testing</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Trusted PAT testing services across Sussex since 2016, serving over 1,200 businesses. We provide efficient, certified, and comprehensive electrical safety testing for all industries.">
+    <meta name="keywords" content="PAT testing, portable appliance testing, Sussex, Kent, Hastings, electrical safety, certified engineers, microwave testing, Sussex Safe Test">
+    <meta name="author" content="Sussex Safe Test">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        }
+        .font-logo {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(26, 26, 26, 0.8), rgba(26, 26, 26, 1)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726a?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-glow-green {
+            text-shadow: 0 0 8px rgba(0, 255, 0, 0.7);
+        }
+        .text-glow-red {
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+        }
+        .transition-all-fast {
+            transition: all 0.2s ease-in-out;
+        }
+        /* Dropdown styles */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'logo': ['Orbitron', 'sans-serif'],
+                        'body': ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#00FF00', // Neon Green from Logo
+                        'primary-dark': '#00DD00',
+                        'secondary': '#FF0000', // Neon Red from Logo
+                        'secondary-dark': '#DD0000',
+                        'dark-bg': '#18181b', 
+                        'dark-bg-card': '#27272a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-main-dark text-gray-200 antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="bg-dark-bg/70 backdrop-blur-md shadow-lg sticky top-0 z-40">
+        <nav class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <a href="#">
+                <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-12 w-auto">
+            </a>
+            <div class="hidden md:flex items-center space-x-6 text-gray-300 font-medium">
+                <a href="#services" class="hover:text-primary transition-all-fast">Services</a>
+                <a href="#process" class="hover:text-primary transition-all-fast">Process</a>
+                <a href="#industries" class="hover:text-primary transition-all-fast">Industries</a>
+                <a href="#pricing" class="hover:text-primary transition-all-fast">Pricing</a>
+                 <!-- Contact Dropdown -->
+                <div class="relative dropdown">
+                    <button class="hover:text-primary transition-all-fast flex items-center">
+                        Contact Us
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div class="dropdown-menu absolute hidden bg-dark-bg-card rounded-md shadow-lg mt-2 py-1 w-48 z-50">
+                        <a href="mailto:office@sussexsafetest.co.uk" class="block px-4 py-2 text-sm text-gray-300 hover:bg-dark-bg hover:text-primary">Email Us</a>
+                        <a href="tel:03333399927" class="block px-4 py-2 text-sm text-gray-300 hover:bg-dark-bg hover:text-primary">Call Us</a>
+                    </div>
+                </div>
+                <a href="#contact" class="bg-secondary text-white px-4 py-2 rounded-md hover:bg-secondary-dark transition-all-fast shadow">Get a Quote</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-bg px-6 pt-2 pb-4 space-y-2">
+            <a href="#services" class="block text-gray-300 hover:text-primary">Services</a>
+            <a href="#process" class="block text-gray-300 hover:text-primary">Process</a>
+            <a href="#industries" class="block text-gray-300 hover:text-primary">Industries</a>
+            <a href="#pricing" class="block text-gray-300 hover:text-primary">Pricing</a>
+            <a href="mailto:office@sussexsafetest.co.uk" class="block text-gray-300 hover:text-primary">Email Us</a>
+            <a href="tel:03333399927" class="block text-gray-300 hover:text-primary">Call Us</a>
+            <a href="#contact" class="block bg-secondary text-white px-4 py-2 rounded-md hover:bg-secondary-dark text-center mt-2">Get a Quote</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section text-white">
+            <div class="container mx-auto px-6 py-20 md:py-28 text-center flex flex-col items-center">
+                 <div class="mb-6">
+                    <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-32 md:h-40 w-auto mx-auto" style="background-color: transparent;">
+                 </div>
+                <h1 class="font-logo text-3xl md:text-5xl font-bold uppercase tracking-wider text-secondary text-glow-red">Portable Appliance Testing</h1>
+                <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
+                    Trusted PAT testing services across Sussex since 2016. With over 1,200 businesses served by our fully certified and uniformed engineers, we provide efficient, comprehensive electrical safety testing for all industries.
+                </p>
+                <a href="#contact" class="mt-8 inline-block bg-primary text-black font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-primary-dark transform hover:-translate-y-1 transition-all-fast text-glow-green">
+                    Get a Quote
+                </a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">Our PAT Testing Services</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-dark-bg-card p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all-fast border border-gray-700 shadow-lg">
+                        <h3 class="font-logo text-xl font-bold mb-2 text-white">Comprehensive Testing</h3>
+                        <p class="text-gray-400">Complete electrical appliance safety testing with free minor repairs and microwave emissions leakage testing.</p>
+                    </div>
+                     <div class="bg-dark-bg-card p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all-fast border border-gray-700 shadow-lg">
+                        <h3 class="font-logo text-xl font-bold mb-2 text-white">Flexible Scheduling</h3>
+                        <p class="text-gray-400">Same-day emergency testing available with scheduling options designed for minimal business disruption.</p>
+                    </div>
+                     <div class="bg-dark-bg-card p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all-fast border border-gray-700 shadow-lg">
+                        <h3 class="font-logo text-xl font-bold mb-2 text-white">Digital Documentation</h3>
+                        <p class="text-gray-400">Detailed digital certificates and compliance documentation delivered within 24 hours.</p>
+                    </div>
+                     <div class="bg-dark-bg-card p-8 rounded-lg text-center transform hover:-translate-y-2 transition-all-fast border border-gray-700 shadow-lg">
+                        <h3 class="font-logo text-xl font-bold mb-2 text-white">Risk Assessment</h3>
+                        <p class="text-gray-400">Professional safety recommendations to ensure ongoing compliance and workplace safety.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-20 bg-dark-bg-card/50 relative overflow-hidden">
+             <img src="https://images.unsplash.com/photo-1616469829935-c2f334623b87?q=80&w=1974&auto=format&fit=crop" class="absolute top-0 left-0 w-full h-full object-cover opacity-5" alt="Abstract background"/>
+            <div class="container mx-auto px-6 relative">
+                 <div class="text-center mb-12">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">Why Choose Sussex Safe Test?</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+                    <div class="space-y-6 lg:col-span-3">
+                        <div class="grid md:grid-cols-2 gap-8">
+                             <div class="bg-dark-bg-card p-4 rounded-lg border-l-4 border-primary"><h3 class="font-logo text-xl font-bold text-white">Local Expertise</h3><p class="text-gray-400 mt-1">Deep knowledge of the Sussex business landscape with friendly, knowledgeable service.</p></div>
+                             <div class="bg-dark-bg-card p-4 rounded-lg border-l-4 border-primary"><h3 class="font-logo text-xl font-bold text-white">Qualified Engineers</h3><p class="text-gray-400 mt-1">All engineers hold City & Guilds 2377-22 qualifications ensuring 100% compliance.</p></div>
+                             <div class="bg-dark-bg-card p-4 rounded-lg border-l-4 border-primary"><h3 class="font-logo text-xl font-bold text-white">Transparent Pricing</h3><p class="text-gray-400 mt-1">Fixed pricing with no hidden charges, including free tagging and minor repairs.</p></div>
+                             <div class="bg-dark-bg-card p-4 rounded-lg border-l-4 border-primary"><h3 class="font-logo text-xl font-bold text-white">Immediate Results</h3><p class="text-gray-400 mt-1">Same-day results and certificates available, giving you peace of mind without the wait.</p></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <img src="https://placehold.co/200x200/18181b/00ff00?text=PASS&font=orbitron" alt="PASS Logo" class="rounded-full border-4 border-primary shadow-lg text-glow-green">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How Process Works Section -->
+        <section id="process" class="py-20 bg-main-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">How Our Process Works</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                </div>
+                <div class="relative">
+                    <div class="hidden md:block absolute top-12 left-0 w-full h-0.5 bg-gray-700/50"></div>
+                    <div class="grid md:grid-cols-4 gap-12 relative">
+                        <div class="flex flex-col items-center text-center"><div class="bg-secondary text-white rounded-full w-24 h-24 flex items-center justify-center text-3xl font-bold border-4 border-dark-bg shadow-lg">1</div><h3 class="font-logo text-xl font-bold text-white mt-6 mb-2">Contact</h3><p class="text-gray-400">Free consultation and needs assessment to understand your requirements.</p></div>
+                        <div class="flex flex-col items-center text-center"><div class="bg-secondary text-white rounded-full w-24 h-24 flex items-center justify-center text-3xl font-bold border-4 border-dark-bg shadow-lg">2</div><h3 class="font-logo text-xl font-bold text-white mt-6 mb-2">Book</h3><p class="text-gray-400">We create a testing schedule to ensure minimal disruption to your operations.</p></div>
+                        <div class="flex flex-col items-center text-center"><div class="bg-secondary text-white rounded-full w-24 h-24 flex items-center justify-center text-3xl font-bold border-4 border-dark-bg shadow-lg">3</div><h3 class="font-logo text-xl font-bold text-white mt-6 mb-2">Test</h3><p class="text-gray-400">Thorough testing by our qualified engineers with minimal impact on your daily activities.</p></div>
+                        <div class="flex flex-col items-center text-center"><div class="bg-secondary text-white rounded-full w-24 h-24 flex items-center justify-center text-3xl font-bold border-4 border-dark-bg shadow-lg">4</div><h3 class="font-logo text-xl font-bold text-white mt-6 mb-2">Compliant</h3><p class="text-gray-400">Comprehensive documentation delivered within 24 hours for ongoing compliance.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Industries We Serve Section -->
+        <section id="industries" class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">Industries We Serve</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+                    <div class="bg-dark-bg-card p-6 rounded-lg border border-gray-700 transform hover:-translate-y-2 transition-all-fast"><svg class="h-12 w-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16" /></svg><h3 class="font-logo text-lg font-bold text-white">Offices & Commercial</h3></div>
+                    <div class="bg-dark-bg-card p-6 rounded-lg border border-gray-700 transform hover:-translate-y-2 transition-all-fast"><svg class="h-12 w-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18" /><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" /><path d="M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4" /><path d="M9 12h6" /><path d="M9 8h6" /></svg><h3 class="font-logo text-lg font-bold text-white">Construction</h3></div>
+                    <div class="bg-dark-bg-card p-6 rounded-lg border border-gray-700 transform hover:-translate-y-2 transition-all-fast"><svg class="h-12 w-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg><h3 class="font-logo text-lg font-bold text-white">Education</h3></div>
+                    <div class="bg-dark-bg-card p-6 rounded-lg border border-gray-700 transform hover:-translate-y-2 transition-all-fast"><svg class="h-12 w-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg><h3 class="font-logo text-lg font-bold text-white">Healthcare</h3></div>
+                    <div class="bg-dark-bg-card p-6 rounded-lg border border-gray-700 transform hover:-translate-y-2 transition-all-fast"><svg class="h-12 w-12 text-primary mx-auto mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" /><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" /></svg><h3 class="font-logo text-lg font-bold text-white">Hospitality</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 bg-main-dark">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">Pricing & Packages</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                    <p class="mt-4 text-gray-400 max-w-3xl mx-auto">Our transparent pricing is based on appliance quantity. We provide a discounted rate for Non-profit companies. All prices are subject to VAT. We include free small/simple repairs and retests at no extra charge.</p>
+                </div>
+                <!-- New Pricing Card Layout -->
+                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Standard Pricing Card -->
+                    <div class="bg-dark-bg-card rounded-lg shadow-lg border-2 border-primary overflow-hidden flex flex-col">
+                        <div class="p-6">
+                            <h3 class="font-logo text-2xl font-bold text-center text-primary text-glow-green">Standard Pricing</h3>
+                        </div>
+                        <div class="p-6 bg-dark-bg flex-grow">
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Small (up to 30 appliances)</span> <span class="font-bold">£50.00 + VAT</span></li>
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Medium (up to 100)</span> <span class="font-bold">£120.00 + VAT</span></li>
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Large (100+)</span> <span class="font-bold">from £0.80 per test</span></li>
+                                <li class="flex justify-between"><span>Microwave leakage testing</span> <span class="font-bold">£20.00 + VAT</span></li>
+                            </ul>
+                        </div>
+                        <div class="p-6 bg-dark-bg-card">
+                            <a href="#contact" class="w-full block text-center bg-primary text-black font-bold py-3 px-6 rounded-lg shadow-md hover:bg-primary-dark transition-all-fast">Get Quote</a>
+                        </div>
+                    </div>
+                    <!-- Non-Profit Pricing Card -->
+                    <div class="bg-dark-bg-card rounded-lg shadow-lg border border-gray-700 overflow-hidden flex flex-col">
+                        <div class="p-6">
+                            <h3 class="font-logo text-2xl font-bold text-center text-white">Non-Profit Pricing</h3>
+                        </div>
+                         <div class="p-6 bg-dark-bg flex-grow">
+                            <ul class="space-y-4 text-gray-300">
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Small (up to 30 appliances)</span> <span class="font-bold">£30.00 + VAT</span></li>
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Medium (up to 100)</span> <span class="font-bold">£90.00 + VAT</span></li>
+                                <li class="flex justify-between border-b border-gray-700 pb-2"><span>Large (100+)</span> <span class="font-bold">from £0.69 per test</span></li>
+                                <li class="flex justify-between"><span>Microwave leakage testing</span> <span class="font-bold">£15.00 + VAT</span></li>
+                            </ul>
+                        </div>
+                         <div class="p-6 bg-dark-bg-card">
+                            <a href="#contact" class="w-full block text-center bg-secondary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-secondary-dark transition-all-fast">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-dark-bg">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="font-logo text-3xl md:text-4xl font-bold text-white">Contact Us</h2>
+                    <div class="w-24 h-1 bg-secondary mx-auto mt-2"></div>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-8">
+                        <div class="bg-dark-bg-card p-6 rounded-lg text-center shadow-lg border border-gray-700"><h3 class="font-logo text-4xl font-bold text-secondary text-glow-red">24/7</h3><p class="text-lg font-semibold text-white mt-1">Emergency Support</p><p class="text-gray-400">Round-the-clock hotline for urgent testing needs.</p></div>
+                        <div class="bg-dark-bg-card p-6 rounded-lg text-center shadow-lg border border-gray-700"><h3 class="font-logo text-4xl font-bold text-secondary text-glow-red">100%</h3><p class="text-lg font-semibold text-white mt-1">Sussex Coverage</p><p class="text-gray-400">Complete service across all Sussex and Kent areas.</p></div>
+                        <div class="bg-dark-bg-card p-6 rounded-lg text-center shadow-lg border border-gray-700"><h3 class="font-logo text-4xl font-bold text-secondary text-glow-red">1,200+</h3><p class="text-lg font-semibold text-white mt-1">Satisfied Clients</p><p class="text-gray-400">Businesses who trust our professional service.</p></div>
+                         <div class="bg-dark-bg-card p-6 rounded-lg shadow-lg border border-gray-700 space-y-4">
+                            <p class="text-gray-300">Based in Hastings, we provide expert PAT testing services throughout Sussex and Kent.</p>
+                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg><a href="mailto:office@sussexsafetest.co.uk" class="text-gray-200 hover:text-primary">office@sussexsafetest.co.uk</a></div>
+                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" fill-rule="evenodd"></path></svg><a href="tel:03333399927" class="text-gray-200 hover:text-primary">033 333 999 27</a></div>
+                             <div class="flex items-start space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg><p class="text-gray-200">48 Greenacres, Westfield, Hastings, East Sussex, TN35 4QT</p></div>
+                        </div>
+                    </div>
+                    <div class="bg-dark-bg-card p-8 rounded-lg shadow-xl border border-gray-700">
+                        <h3 class="font-logo text-2xl font-bold text-white mb-6">Get a Free Quote</h3>
+                        <form id="contact-form">
+                            <div class="mb-4"><label for="name" class="block text-gray-300 font-medium mb-1">Name</label><input type="text" id="name" name="name" class="w-full px-4 py-2 bg-dark-bg border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary" required></div>
+                            <div class="mb-4"><label for="email" class="block text-gray-300 font-medium mb-1">Email</label><input type="email" id="email" name="email" class="w-full px-4 py-2 bg-dark-bg border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary" required></div>
+                            <div class="mb-4"><label for="message" class="block text-gray-300 font-medium mb-1">Message</label><textarea id="message" name="message" rows="4" class="w-full px-4 py-2 bg-dark-bg border border-gray-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-primary" required></textarea></div>
+                            <button type="submit" class="w-full bg-secondary text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-secondary-dark transition-all-fast">Send Message</button>
+                        </form>
+                        <p id="form-message" class="mt-4 text-center"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+             <div class="mb-4">
+                <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-20 w-auto mx-auto">
+            </div>
+            <p>&copy; <span id="current-year"></span> Sussex Safe Test. All Rights Reserved.</p>
+            <p class="text-sm text-gray-500 mt-2">Professional Portable Appliance Testing across Sussex & Kent.</p>
+        </div>
+    </footer>
+    
+    <!-- Floating Contact Button -->
+    <a href="#contact" class="fixed bottom-5 right-5 bg-secondary text-white p-4 rounded-full shadow-lg hover:bg-secondary-dark transition-all-fast z-50 flex items-center justify-center">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+    </a>
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                formMessage.textContent = 'Please fill out all fields.';
+                formMessage.style.color = '#FF0000';
+                return;
+            }
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                formMessage.textContent = 'Please enter a valid email address.';
+                formMessage.style.color = '#FF0000';
+                return;
+            }
+            formMessage.textContent = 'Thank you for your message!';
+            formMessage.style.color = '#00FF00';
+            contactForm.reset();
+            setTimeout(() => { formMessage.textContent = ''; }, 5000);
+        });
+        
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
