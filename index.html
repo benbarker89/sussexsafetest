@@ -110,7 +110,7 @@
         <section class="hero-section text-white min-h-screen flex items-center justify-center">
             <div class="container mx-auto px-6 py-20 md:py-28 text-center flex flex-col items-center">
                  <div class="mb-6">
-                    <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="h-40 md:h-56 lg:h-64 w-auto mx-auto" style="background-color: transparent;">
+                    <img src="SST LOGO MAIN.png" alt="Sussex Safe Test Logo" class="w-2/3 md:w-1/2 lg:w-1/3 max-w-lg mx-auto" style="background-color: transparent;">
                  </div>
                 <h1 class="font-logo text-3xl md:text-5xl font-bold uppercase tracking-wider text-secondary text-glow-red">Portable Appliance Testing</h1>
                 <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
@@ -273,7 +273,7 @@
                          <div class="bg-dark-bg-card p-6 rounded-lg shadow-lg border border-gray-700 space-y-4">
                             <p class="text-gray-300">Based in Hastings, we provide expert PAT testing services throughout Sussex and Kent.</p>
                             <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg><a href="mailto:office@sussexsafetest.co.uk" class="text-gray-200 hover:text-primary">office@sussexsafetest.co.uk</a></div>
-                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" fill-rule="evenodd"></path></svg><a href="tel:03333399927" class="font-bold text-xl text-primary text-glow-green hover:text-primary-dark">033 333 999 27</a></div>
+                            <div class="flex items-center space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd" fill-rule="evenodd"></path></svg><a href="tel:03333399927" class="font-bold text-2xl text-primary text-glow-green hover:text-primary-dark">033 333 999 27</a></div>
                              <div class="flex items-start space-x-3"><svg class="w-5 h-5 text-primary flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path></svg><p class="text-gray-200">48 Greenacres, Westfield, Hastings, East Sussex, TN35 4QT</p></div>
                         </div>
                     </div>
@@ -320,15 +320,17 @@
             const contactDropdownButton = document.getElementById('contact-dropdown-button');
             const contactDropdownMenu = document.getElementById('contact-dropdown-menu');
 
-            contactDropdownButton.addEventListener('click', (event) => {
-                event.stopPropagation();
-                contactDropdownMenu.classList.toggle('hidden');
-            });
+            if (contactDropdownButton) {
+                contactDropdownButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    contactDropdownMenu.classList.toggle('hidden');
+                });
+            }
 
             // Close dropdown when clicking outside
             window.addEventListener('click', (event) => {
-                if (!contactDropdownButton.contains(event.target) && !contactDropdownMenu.contains(event.target)) {
-                    if (!contactDropdownMenu.classList.contains('hidden')) {
+                if (contactDropdownMenu && !contactDropdownMenu.classList.contains('hidden')) {
+                     if (!contactDropdownButton.contains(event.target)) {
                         contactDropdownMenu.classList.add('hidden');
                     }
                 }
